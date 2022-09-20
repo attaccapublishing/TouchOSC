@@ -15,7 +15,7 @@ function onValueChanged(key)
       for i = row_start_idx,(row_start_idx + self.parent.gridX - 1),1
       do
         if (i ~= self.index) then
-            self.parent:findByName(tostring(i)).values.x = 0
+            self.parent.children[i].values.x = 0
         end
       end
     end
@@ -23,6 +23,6 @@ function onValueChanged(key)
 end
 ```
 
-This script relies on grids having reliable numbering - left-to-right, top-to-bottom starting with an index of 1 at the top left of the grid - and reliable naming of each button which matches the button's index. It will scale to any size grid object as it uses the grid's `gridX` property to determine the size of each row. 
+This script relies on grids having reliable numbering: left-to-right, top-to-bottom starting with an index of 1 at the top left of the grid . It will scale to any size grid object as it uses the grid's `gridX` property to determine the size of each row. 
 
 There's a bit of nudging values into the right place (all of the `+1`s) to account for the grid's index starting at 1. 
