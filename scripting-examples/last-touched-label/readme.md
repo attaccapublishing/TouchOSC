@@ -20,3 +20,6 @@ When a control it touched, it updates the `text` property of `last_touched`, the
 
 ## Potential Improvements
 It would be great to find a way to do this without requiring a script attached to every button. This might be possible through use of a frame or grid.
+
+## Local Messages
+A second version of the project (`last-touched-label-local.tosc`) is also included to demonstrate the same behavior using local messages instead of scripts.
